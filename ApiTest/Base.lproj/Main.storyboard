@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1au-Gw-ykY">
+                                <rect key="frame" x="125" y="195" width="124" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Take Photo"/>
+                                <connections>
+                                    <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8yQ-GG-WIr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k4B-cK-2so">
+                                <rect key="frame" x="116" y="257" width="142" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Select Photo"/>
+                                <connections>
+                                    <action selector="selectPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wyy-0K-tha"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6oE-az-VyB">
+                                <rect key="frame" x="0.0" y="20" width="375" height="524"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6oE-az-VyB" secondAttribute="height" multiplier="375:524" id="Hql-gx-WHt"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="76a-uU-sav">
+                                <rect key="frame" x="0.0" y="544" width="375" height="123"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Oo-Or-yqv">
+                                        <rect key="frame" x="10" y="42" width="125" height="36"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Set Language"/>
+                                        <connections>
+                                            <action selector="setLanguageButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k4N-Gw-QuO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f36-pK-xaQ">
+                                        <rect key="frame" x="243" y="42" width="122" height="36"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Submit Photo"/>
+                                        <connections>
+                                            <action selector="submitPhotoButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7pM-1N-4Fc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="f36-pK-xaQ" secondAttribute="bottom" constant="45" id="OmU-Jy-lMu"/>
+                                    <constraint firstItem="1Oo-Or-yqv" firstAttribute="leading" secondItem="76a-uU-sav" secondAttribute="leading" constant="10" id="PSn-Op-wRv"/>
+                                    <constraint firstAttribute="bottom" secondItem="1Oo-Or-yqv" secondAttribute="bottom" constant="45" id="tco-p3-93v"/>
+                                    <constraint firstAttribute="trailing" secondItem="f36-pK-xaQ" secondAttribute="trailing" constant="10" id="vpt-Xn-huH"/>
+                                </constraints>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KpH-zX-aDr">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="KpH-zX-aDr" secondAttribute="height" multiplier="375:44" id="rLJ-xF-3e2"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="What Does It Say?" id="hQg-nQ-VNL" userLabel="Take a Photo"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KpH-zX-aDr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0FC-Bq-lJG"/>
+                            <constraint firstAttribute="trailing" secondItem="76a-uU-sav" secondAttribute="trailing" id="1X2-bm-jhH"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="76a-uU-sav" secondAttribute="bottom" id="5Bb-YA-eI4"/>
+                            <constraint firstItem="KpH-zX-aDr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="6y0-x8-edC"/>
+                            <constraint firstItem="6oE-az-VyB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="C3I-Fu-sK8"/>
+                            <constraint firstItem="1au-Gw-ykY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="175" id="DsJ-OA-p8Q"/>
+                            <constraint firstItem="76a-uU-sav" firstAttribute="top" secondItem="6oE-az-VyB" secondAttribute="bottom" id="GAg-Et-8HJ"/>
+                            <constraint firstItem="76a-uU-sav" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TJX-al-fPX"/>
+                            <constraint firstItem="k4B-cK-2so" firstAttribute="top" secondItem="1au-Gw-ykY" secondAttribute="bottom" constant="20" id="Vtp-BZ-cX4"/>
+                            <constraint firstAttribute="trailing" secondItem="6oE-az-VyB" secondAttribute="trailing" id="Wk3-4i-a83"/>
+                            <constraint firstItem="76a-uU-sav" firstAttribute="top" secondItem="6oE-az-VyB" secondAttribute="bottom" id="WkU-8G-lEk"/>
+                            <constraint firstAttribute="trailing" secondItem="KpH-zX-aDr" secondAttribute="trailing" id="YT8-RK-HbY"/>
+                            <constraint firstItem="k4B-cK-2so" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cSc-1G-Plv"/>
+                            <constraint firstItem="6oE-az-VyB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="kGG-SM-Cyi"/>
+                            <constraint firstItem="1au-Gw-ykY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nS1-hW-TWF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="6oE-az-VyB" id="wAd-gr-Wf6"/>
+                        <outlet property="setLanguageButton" destination="1Oo-Or-yqv" id="2bu-06-hOi"/>
+                        <outlet property="submitPhotoButton" destination="f36-pK-xaQ" id="g95-aV-gCe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="36.431784107946029"/>
+        </scene>
+    </scenes>
+</document>
