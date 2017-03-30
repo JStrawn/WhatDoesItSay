@@ -25,9 +25,16 @@
     
     NSString *myKey = @"5bcdbb3baaf449e2b449dc7eb7743b45";
     
+    //Bobby & Emi - this needs to be NoT hard coded
+    NSString *currentLanguage = @"en";
+    
     //[self.activityIndicator startAnimating];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
-    NSURL *url = [NSURL URLWithString:@"https://westus.api.cognitive.microsoft.com/vision/v1.0/ocr?language=unk&detectOrientation=true"];
+    
+    NSString *urlString = [NSString stringWithFormat: @"https://westus.api.cognitive.microsoft.com/vision/v1.0/ocr?language=%@&detectOrientation=true", currentLanguage];
+    
+    
+    NSURL *url = [NSURL URLWithString:urlString];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     request.HTTPBody = imageData;
     [request addValue:myKey forHTTPHeaderField:@"Ocp-Apim-Subscription-Key"];
