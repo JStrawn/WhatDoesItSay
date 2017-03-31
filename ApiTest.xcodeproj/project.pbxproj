@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60B8AD111E8E56A1002FB163 /* ImageProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B8AD101E8E56A1002FB163 /* ImageProcessor.m */; };
 		8C2DF4071E8E065B00564E12 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2DF4051E8E065B00564E12 /* SettingsViewController.m */; };
 		8C2DF4081E8E065B00564E12 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C2DF4061E8E065B00564E12 /* SettingsViewController.xib */; };
 		C341684A1E8D8106000AC8E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C34168491E8D8106000AC8E8 /* main.m */; };
@@ -22,6 +23,11 @@
 
 /* Begin PBXFileReference section */
 		606DC6921E8DF2D7004EF2E6 /* APIKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIKey.h; sourceTree = "<group>"; };
+		60B8AD0F1E8E56A1002FB163 /* ImageProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageProcessor.h; sourceTree = "<group>"; };
+		60B8AD101E8E56A1002FB163 /* ImageProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageProcessor.m; sourceTree = "<group>"; };
+		8C2DF4041E8E065B00564E12 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		8C2DF4051E8E065B00564E12 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		8C2DF4061E8E065B00564E12 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		C34168451E8D8106000AC8E8 /* ApiTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApiTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C34168491E8D8106000AC8E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C341684B1E8D8106000AC8E8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -69,24 +75,26 @@
 		C34168471E8D8106000AC8E8 /* ApiTest */ = {
 			isa = PBXGroup;
 			children = (
-				C341685F1E8D8119000AC8E8 /* Model.h */,
 				606DC6921E8DF2D7004EF2E6 /* APIKey.h */,
-				C34168601E8D8119000AC8E8 /* Model.m */,
 				C341684B1E8D8106000AC8E8 /* AppDelegate.h */,
 				C341684C1E8D8106000AC8E8 /* AppDelegate.m */,
-				C341684E1E8D8106000AC8E8 /* ViewController.h */,
-				C341684F1E8D8106000AC8E8 /* ViewController.m */,
+				C34168541E8D8106000AC8E8 /* Assets.xcassets */,
+				60B8AD0F1E8E56A1002FB163 /* ImageProcessor.h */,
+				60B8AD101E8E56A1002FB163 /* ImageProcessor.m */,
+				C34168591E8D8107000AC8E8 /* Info.plist */,
+				C34168561E8D8106000AC8E8 /* LaunchScreen.storyboard */,
 				C34168511E8D8106000AC8E8 /* Main.storyboard */,
-				8C2DF4041E8E065B00564E12 /* SettingsViewController.h */,
-				8C2DF4051E8E065B00564E12 /* SettingsViewController.m */,
-				8C2DF4061E8E065B00564E12 /* SettingsViewController.xib */,
+				C341685F1E8D8119000AC8E8 /* Model.h */,
+				C34168601E8D8119000AC8E8 /* Model.m */,
 				C34168671E8D9BB3000AC8E8 /* ResultsViewController.h */,
 				C34168681E8D9BB3000AC8E8 /* ResultsViewController.m */,
 				C34168691E8D9BB3000AC8E8 /* ResultsViewController.xib */,
-				C34168541E8D8106000AC8E8 /* Assets.xcassets */,
-				C34168561E8D8106000AC8E8 /* LaunchScreen.storyboard */,
-				C34168591E8D8107000AC8E8 /* Info.plist */,
+				8C2DF4041E8E065B00564E12 /* SettingsViewController.h */,
+				8C2DF4051E8E065B00564E12 /* SettingsViewController.m */,
+				8C2DF4061E8E065B00564E12 /* SettingsViewController.xib */,
 				C34168481E8D8106000AC8E8 /* Supporting Files */,
+				C341684E1E8D8106000AC8E8 /* ViewController.h */,
+				C341684F1E8D8106000AC8E8 /* ViewController.m */,
 			);
 			path = ApiTest;
 			sourceTree = "<group>";
@@ -173,6 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60B8AD111E8E56A1002FB163 /* ImageProcessor.m in Sources */,
 				C34168611E8D8119000AC8E8 /* Model.m in Sources */,
 				C34168501E8D8106000AC8E8 /* ViewController.m in Sources */,
 				C341684D1E8D8106000AC8E8 /* AppDelegate.m in Sources */,
