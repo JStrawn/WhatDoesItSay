@@ -50,6 +50,7 @@
     
     self.settingsViewController = [[SettingsViewController alloc]init];
     self.settingsViewController.title = @"Settings";
+    self.settingsViewController.settings = _imageProcessor.settings;
     [self.navigationController pushViewController:self.settingsViewController animated:YES];
 }
 
