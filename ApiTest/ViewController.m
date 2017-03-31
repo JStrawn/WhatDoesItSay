@@ -36,9 +36,6 @@
     UIBarButtonItem *settingsButton = [[UIBarButtonItem alloc] initWithTitle:@"Settings" style:UIBarButtonItemStylePlain target:self action:@selector(goToSettingsVC)];
     self.navigationItem.leftBarButtonItem = settingsButton;
     
-    UIBarButtonItem *resultsButton = [[UIBarButtonItem alloc] initWithTitle:@"Submit" style:UIBarButtonItemStylePlain target:self action:@selector(goToResultsVC)];
-    self.navigationItem.rightBarButtonItem = resultsButton;
-    
     self.resultsViewController = [[ResultsViewController alloc] init];
 
     _imageProcessor = [ImageProcessor sharedInstance];
@@ -59,7 +56,14 @@
 
 - (void)goToResultsVC {
     
+    self.resultsViewController = [[ResultsViewController alloc]init];
+    
     self.resultsViewController.title = @"Translation";
+    
+    UIImage *imageToPush = [[UIImage alloc]init];
+    imageToPush = self.photo;
+    
+    self.resultsViewController.pushedImage = imageToPush;
     //self.imageView.image = self.resultsViewController.
     [self.navigationController pushViewController:self.resultsViewController animated:YES];
 }
@@ -91,10 +95,9 @@
     
     UIImage *selectedImage = [info objectForKey:UIImagePickerControllerOriginalImage];
     NSData *imageData = UIImageJPEGRepresentation(selectedImage, 0.5);
-    [_imageProcessor processImage:imageData];
-    
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
-    self.imageView.image = chosenImage;
+    self.photo = chosenImage;
+    [_imageProcessor processImage:imageData];
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
     

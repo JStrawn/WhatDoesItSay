@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (retain, nonatomic) ResultsViewController *resultsViewController;
 @property (retain, nonatomic) SettingsViewController *settingsViewController;
+@property (strong, nonatomic) UIImage *photo;
 
 - (IBAction)takePhoto:(id)sender;
 - (IBAction)selectPhoto:(id)sender;
