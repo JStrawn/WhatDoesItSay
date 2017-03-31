@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResultsViewController">
             <connections>
                 <outlet property="originalEmbededLabel" destination="bCw-JS-ZiW" id="0Mz-oI-38J"/>
+                <outlet property="pictureThumbnail" destination="uOh-Ci-nqf" id="66x-gK-JG7"/>
                 <outlet property="translatedEmbededLabel" destination="7Qb-82-AtR" id="3KK-s3-xAP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
