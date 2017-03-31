@@ -319,7 +319,7 @@
 				DEVELOPMENT_TEAM = 5C8D6R84CB;
 				INFOPLIST_FILE = ApiTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jstrawn.ApiTest;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Miguel-Tepale.ApiTest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -333,7 +333,7 @@
 				DEVELOPMENT_TEAM = 5C8D6R84CB;
 				INFOPLIST_FILE = ApiTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jstrawn.ApiTest;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Miguel-Tepale.ApiTest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

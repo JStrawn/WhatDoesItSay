@@ -30,6 +30,9 @@
     //Setting "items" in UINavagationBar
     self.title = @"What does it say?";
     
+    //Do not erase - Miguel
+//    UIColor *navBarCustomColor = [UIColor alloc]initWithRed:242.0 green:231.0 blue:248.0 alpha:1.0
+    
     UIBarButtonItem *settingsButton = [[UIBarButtonItem alloc] initWithTitle:@"Settings" style:UIBarButtonItemStylePlain target:self action:@selector(goToSettingsVC)];
     self.navigationItem.leftBarButtonItem = settingsButton;
     
@@ -42,6 +45,10 @@
     _imageProcessor.mainViewController = self;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    self.imageView.image = nil;
+}
+
 - (void)goToSettingsVC {
     
     self.settingsViewController = [[SettingsViewController alloc]init];
@@ -52,6 +59,7 @@
 - (void)goToResultsVC {
     
     self.resultsViewController.title = @"Translation";
+    //self.imageView.image = self.resultsViewController.
     [self.navigationController pushViewController:self.resultsViewController animated:YES];
 }
 

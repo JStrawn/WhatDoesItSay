@@ -22,7 +22,7 @@
 
 @interface Model : NSObject
 
-@property (nonatomic) id <ModelDelegate> delegate;
+@property (nonatomic, assign) id <ModelDelegate> delegate;
 
 - (void) extractText: (NSString *) language
                 from: (NSData *) imageData;
