@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="29Q-Uf-e4G">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="29Q-Uf-e4G">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -42,25 +43,27 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zPX-HG-ooP">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7jK-N4-syV">
+                                <rect key="frame" x="16" y="626" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="zPX-HG-ooP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9KE-Nm-6Ih"/>
+                            <constraint firstItem="7jK-N4-syV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Gji-nr-Ibg"/>
                             <constraint firstItem="tb9-NB-KXC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="O5b-H9-DBm"/>
-                            <constraint firstItem="zPX-HG-ooP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Zty-c5-7ml"/>
                             <constraint firstItem="tb9-NB-KXC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="b3h-PC-MSs"/>
-                            <constraint firstAttribute="trailing" secondItem="zPX-HG-ooP" secondAttribute="trailing" id="ddx-zo-bIg"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zPX-HG-ooP" secondAttribute="bottom" id="pX2-Gf-SRD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7jK-N4-syV" secondAttribute="bottom" constant="20" id="h8L-Xn-i0i"/>
+                            <constraint firstItem="7jK-N4-syV" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="s6f-mR-gch"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lHv-JZ-RH1">
                         <nil key="title"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="imageView" destination="zPX-HG-ooP" id="gjm-ou-BqH"/>
+                        <outlet property="sourceAndTargetLabel" destination="7jK-N4-syV" id="L6a-gc-aBg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

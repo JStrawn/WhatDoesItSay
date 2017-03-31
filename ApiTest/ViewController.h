@@ -16,6 +16,7 @@
 @property (retain, nonatomic) ResultsViewController *resultsViewController;
 @property (retain, nonatomic) SettingsViewController *settingsViewController;
 @property (strong, nonatomic) UIImage *photo;
+@property (weak, nonatomic) IBOutlet UILabel *sourceAndTargetLabel;
 
 - (IBAction)takePhoto:(id)sender;
 - (IBAction)selectPhoto:(id)sender;

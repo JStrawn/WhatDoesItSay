@@ -44,6 +44,13 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     self.imageView.image = nil;
+    
+    if ([_imageProcessor.settings.sourceLanguage isEqualToString:@"unk"])
+               self.sourceAndTargetLabel.text = [NSString stringWithFormat: @"Language Setting: Auto Detect -> %@", _imageProcessor.settings.targetLanguage];
+    
+    else
+        self.sourceAndTargetLabel.text = [NSString stringWithFormat: @"Language Setting: %@ -> %@", _imageProcessor.settings.sourceLanguage,_imageProcessor.settings.targetLanguage];
+    
 }
 
 - (void)goToSettingsVC {
