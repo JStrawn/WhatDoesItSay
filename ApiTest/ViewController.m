@@ -30,6 +30,9 @@
     //Setting "items" in UINavagationBar
     self.title = @"What does it say?";
     
+    //Do not erase - Miguel
+//    UIColor *navBarCustomColor = [UIColor alloc]initWithRed:242.0 green:231.0 blue:248.0 alpha:1.0
+    
     UIBarButtonItem *settingsButton = [[UIBarButtonItem alloc] initWithTitle:@"Settings" style:UIBarButtonItemStylePlain target:self action:@selector(goToSettingsVC)];
     self.navigationItem.leftBarButtonItem = settingsButton;
     
