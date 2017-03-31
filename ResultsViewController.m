@@ -26,9 +26,13 @@
     //self.originalTextActivityIndicator = [[UIActivityIndicatorView alloc]init];
     //self.translatedTextActivityIndicator = [[UIActivityIndicatorView alloc]init];
     
+
+    
+}
+
+-(void)viewWillAppear:(BOOL)animated {
     [self.originalTextActivityIndicator startAnimating];
     [self.translatedTextActivityIndicator startAnimating];
-    
 }
 
 - (void)returnToMainVc {
