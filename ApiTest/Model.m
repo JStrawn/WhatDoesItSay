@@ -13,6 +13,8 @@
 
 @implementation Model
 
+@synthesize delegate;
+
 #pragma mark - Public Methods
 
 //////////////////////////////////////////////////////////////////////////////////////////
@@ -191,24 +193,17 @@
                   from: (NSString *) sourceLanguage
                     to: (NSString *) targetLanguage
 {
-    NSString *encodedText = [text stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
-
     // Initialize the request
-    NSString *urlString = [NSString stringWithFormat:@"https://translate.yandex.net/api/v1.5/tr.json/translate?lang=%@-%@&key=%@", sourceLanguage, targetLanguage, YANDEX_KEY];
+    NSString *encodedText = [text stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+    NSString *urlString = [NSString stringWithFormat:@"https://translate.yandex.net/api/v1.5/tr.json/translate?lang=%@-%@&key=%@&text=%@", sourceLanguage, targetLanguage, YANDEX_KEY, encodedText];
     NSURL *url = [NSURL URLWithString:urlString];
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-    request.HTTPBody = [encodedText dataUsingEncoding:NSUTF8StringEncoding];
-    [request addValue:@"*/*" forHTTPHeaderField:@"Accept"];
-    [request addValue:[NSString stringWithFormat:@"%lu", request.HTTPBody.length] forHTTPHeaderField:@"Content-Length"];
-    [request addValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
-    request.HTTPMethod = @"POST";
     
     // Initialize a session for managing data transfer tasks
     NSURLSession *session = [NSURLSession sharedSession];
     
     // Execute the request in the background
-    [[session dataTaskWithRequest:request
-                completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error)
+    [[session dataTaskWithURL:url
+            completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error)
       {
           NSString *errorMsg;
           

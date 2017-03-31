@@ -45,6 +45,10 @@
     _imageProcessor.mainViewController = self;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    self.imageView.image = nil;
+}
+
 - (void)goToSettingsVC {
     
     self.settingsViewController = [[SettingsViewController alloc]init];

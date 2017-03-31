@@ -32,9 +32,9 @@ static Model *_model;
                       _sharedInstance = [[ImageProcessor alloc] init];
                       
                       _model = [[Model alloc] init];
-                      _model.delegate = self;
+                      _model.delegate = _sharedInstance;
                       
-//                      _settings = [[Settings alloc] init];
+                      //                      _settings = [[Settings alloc] init];
                   });
     
     return _sharedInstance;
@@ -47,7 +47,8 @@ static Model *_model;
 //////////////////////////////////////////////////////////////////////////////////////////
 - (void) processImage: (NSData *) imageData
 {
-//    [_model extractText:_settings.sourceLanguage from:imageData];
+    //    [_model extractText:_settings.sourceLanguage from:imageData];
+    [_model extractText:@"es" from:imageData];
     
     // set resultsViewController thumbnail ???
     
@@ -69,9 +70,12 @@ static Model *_model;
     // Load the extracted text into resultsViewController
     
     // Send the extracted text for translation
-//    [_model translateText:text
-//                     from:displayLanguage
-//                       to:_settings.targetLanguage];
+    //    [_model translateText:text
+    //                     from:displayLanguage
+    //                       to:_settings.targetLanguage];
+    [_model translateText:text
+                     from:displayLanguage
+                       to:@"en"];
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////
