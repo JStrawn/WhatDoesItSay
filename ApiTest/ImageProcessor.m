@@ -11,9 +11,23 @@
 
 
 static Model *_model;
-//static Settings *_settings;
+static NSDictionary *_languageDictionary;
+static Settings *_settings;
+
 
 @implementation ImageProcessor
+
+#pragma mark - Public Properties
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Implements getter method for settings property.
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+- (Settings *) settings
+{
+    return _settings;
+}
 
 #pragma mark - Public Methods
 
@@ -34,7 +48,11 @@ static Model *_model;
                       _model = [[Model alloc] init];
                       _model.delegate = _sharedInstance;
                       
-                      //                      _settings = [[Settings alloc] init];
+                      _settings = [[Settings alloc] init];
+                      _languageDictionary = [_model getLanguages];
+                      NSArray *keys = [_languageDictionary allKeys];
+                      _settings.sourceLanguagesList = [keys sortedArrayUsingSelector:@selector(compare:)];
+                      _settings.targetLanguagesList = _settings.sourceLanguagesList;
                   });
     
     return _sharedInstance;
@@ -47,8 +65,7 @@ static Model *_model;
 //////////////////////////////////////////////////////////////////////////////////////////
 - (void) processImage: (NSData *) imageData
 {
-    //    [_model extractText:_settings.sourceLanguage from:imageData];
-    [_model extractText:@"es" from:imageData];
+    [_model extractText:_languageDictionary[_settings.sourceLanguage] from:imageData];
     
     // set resultsViewController thumbnail ???
     
@@ -67,26 +84,21 @@ static Model *_model;
 //////////////////////////////////////////////////////////////////////////////////////////
 - (void) didExtractText: (NSString *) text in: (NSString *) displayLanguage
 {
-    // Load the extracted text into resultsViewController
-    
-    // Send the extracted text for translation
-    //    [_model translateText:text
-    //                     from:displayLanguage
-    //                       to:_settings.targetLanguage];
-    
-    if (text.length != 0) 
-        
+    // If text was found in the image then ...
+    if (text.length != 0)
     {
-    
-    [_model translateText:text
-                     from:displayLanguage
-                       to:@"en"];
+        // Send the extracted text for translation
+        [_model translateText:text
+                         from:displayLanguage
+                           to:_languageDictionary[_settings.targetLanguage]];
 
+        // Display the extracted text in the resultsViewController
         self.mainViewController.resultsViewController.originalEmbededLabel.text = text;
-    
-    } else {
-        self.mainViewController.resultsViewController.originalEmbededLabel.text = @"No text could be found in photo";
     }
+    // Otherwise, ...
+    else
+        // Display an informational message
+        self.mainViewController.resultsViewController.originalEmbededLabel.text = @"No text could be found in photo";
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////
@@ -106,14 +118,11 @@ static Model *_model;
 //////////////////////////////////////////////////////////////////////////////////////////
 - (void) didTranslateText: (NSString *) translatedText
 {
-    // load translated text into resultsViewController
+    // Display the translated text in the resultsViewController
+    self.mainViewController.resultsViewController.translatedEmbededLabel.text = translatedText;
     
     // stop activity indicator ???
     //  [self.mainViewController.resultsViewController.activityIndicator stopAnimating];
-    
-    
-    self.mainViewController.resultsViewController.translatedEmbededLabel.text = translatedText;
-
 }
 
 @end

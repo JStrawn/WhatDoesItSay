@@ -14,7 +14,8 @@
 
 @interface ImageProcessor : NSObject<ModelDelegate>
 
-@property (atomic, strong) ViewController *mainViewController;
+@property (atomic, retain) ViewController *mainViewController;
+@property (atomic, retain, readonly) Settings *settings;
 
 + (ImageProcessor *) sharedInstance;
 
