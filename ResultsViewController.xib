@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,8 +13,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResultsViewController">
             <connections>
                 <outlet property="originalEmbededLabel" destination="bCw-JS-ZiW" id="0Mz-oI-38J"/>
+                <outlet property="originalTextActivityIndicator" destination="ylG-Jt-46B" id="fM2-GR-krr"/>
                 <outlet property="pictureThumbnail" destination="uOh-Ci-nqf" id="66x-gK-JG7"/>
                 <outlet property="translatedEmbededLabel" destination="7Qb-82-AtR" id="3KK-s3-xAP"/>
+                <outlet property="translatedTextActivityIndicator" destination="CQh-8N-3hF" id="iEY-Fv-IMA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -66,21 +68,29 @@
                     </constraints>
                 </scrollView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Original Text:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TX9-Tl-UHA" userLabel="Original Text Label">
-                    <rect key="frame" x="16" y="265" width="104.5" height="23.5"/>
+                    <rect key="frame" x="16" y="265" width="105" height="24"/>
                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                     <color key="textColor" red="0.3194822371006012" green="0.14316189289093018" blue="0.93707489967346191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Translated Text:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1zB-cp-7b5" userLabel="Translated Text Label">
-                    <rect key="frame" x="16" y="470" width="121.5" height="23.5"/>
+                    <rect key="frame" x="16" y="470" width="122" height="24"/>
                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                     <color key="textColor" red="0.3194822371006012" green="0.14316189289093018" blue="0.93707489967346191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ylG-Jt-46B">
+                    <rect key="frame" x="177" y="367" width="20" height="20"/>
+                </activityIndicatorView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="CQh-8N-3hF">
+                    <rect key="frame" x="177" y="570" width="20" height="20"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="0.83996482510000003" green="0.73246429950000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstItem="ylG-Jt-46B" firstAttribute="centerX" secondItem="OP6-M2-E8B" secondAttribute="centerX" id="0eF-pZ-Y2c"/>
                 <constraint firstItem="OP6-M2-E8B" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="3kf-LB-ws8"/>
+                <constraint firstItem="ylG-Jt-46B" firstAttribute="centerY" secondItem="OP6-M2-E8B" secondAttribute="centerY" id="6KY-Yc-CBw"/>
                 <constraint firstAttribute="trailing" secondItem="bPf-9D-jAJ" secondAttribute="trailing" id="7j1-Cz-GJn"/>
                 <constraint firstAttribute="trailing" secondItem="OP6-M2-E8B" secondAttribute="trailing" id="C60-SM-ZH5"/>
                 <constraint firstItem="OP6-M2-E8B" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Pb8-rw-dW4"/>
@@ -89,9 +99,11 @@
                 <constraint firstAttribute="trailing" secondItem="uOh-Ci-nqf" secondAttribute="trailing" id="ZbB-az-c0e"/>
                 <constraint firstItem="uOh-Ci-nqf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="60" id="aaQ-kz-5td"/>
                 <constraint firstAttribute="bottom" secondItem="bPf-9D-jAJ" secondAttribute="bottom" constant="1" id="adH-Wa-JfC"/>
+                <constraint firstItem="CQh-8N-3hF" firstAttribute="centerY" secondItem="bPf-9D-jAJ" secondAttribute="centerY" id="b73-vn-bYK"/>
                 <constraint firstItem="uOh-Ci-nqf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="b9X-QS-Cty"/>
                 <constraint firstItem="bPf-9D-jAJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="d6b-pS-MKx"/>
                 <constraint firstItem="bPf-9D-jAJ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dPq-zQ-nxf"/>
+                <constraint firstItem="CQh-8N-3hF" firstAttribute="centerX" secondItem="bPf-9D-jAJ" secondAttribute="centerX" id="fNm-sU-Ges"/>
                 <constraint firstItem="TX9-Tl-UHA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="kTW-lq-2R8"/>
                 <constraint firstItem="TX9-Tl-UHA" firstAttribute="top" secondItem="uOh-Ci-nqf" secondAttribute="bottom" constant="8" id="rYr-9v-bzC"/>
                 <constraint firstItem="1zB-cp-7b5" firstAttribute="top" secondItem="OP6-M2-E8B" secondAttribute="bottom" constant="1" id="zCJ-Rt-vSi"/>

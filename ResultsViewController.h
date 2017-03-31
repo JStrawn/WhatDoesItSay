@@ -14,5 +14,7 @@
 @property (strong, nonatomic)UIImage *pushedImage;
 @property (weak, nonatomic) IBOutlet UILabel *originalEmbededLabel;
 @property (weak, nonatomic) IBOutlet UILabel *translatedEmbededLabel;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *originalTextActivityIndicator;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *translatedTextActivityIndicator;
 
 @end

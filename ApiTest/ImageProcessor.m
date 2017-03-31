@@ -99,7 +99,13 @@ static Settings *_settings;
     else
         // Display an informational message
         self.mainViewController.resultsViewController.originalEmbededLabel.text = @"No text could be found in photo";
-}
+        [self.mainViewController.resultsViewController.originalTextActivityIndicator stopAnimating];
+        [self.mainViewController.resultsViewController.originalTextActivityIndicator setHidden:YES];
+        [self.mainViewController.resultsViewController.translatedTextActivityIndicator stopAnimating];
+        [self.mainViewController.resultsViewController.translatedTextActivityIndicator setHidden:YES];
+
+    }
+
 
 //////////////////////////////////////////////////////////////////////////////////////////
 //
@@ -123,6 +129,12 @@ static Settings *_settings;
     
     // stop activity indicator ???
     //  [self.mainViewController.resultsViewController.activityIndicator stopAnimating];
+    
+    
+    self.mainViewController.resultsViewController.translatedEmbededLabel.text = translatedText;
+    [self.mainViewController.resultsViewController.translatedTextActivityIndicator stopAnimating];
+    [self.mainViewController.resultsViewController.translatedTextActivityIndicator setHidden:YES];
+
 }
 
 @end
