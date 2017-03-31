@@ -59,6 +59,7 @@
 - (void)goToResultsVC {
     
     self.resultsViewController.title = @"Translation";
+    //self.imageView.image = self.resultsViewController.
     [self.navigationController pushViewController:self.resultsViewController animated:YES];
 }
 

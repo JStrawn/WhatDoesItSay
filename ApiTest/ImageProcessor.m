@@ -73,13 +73,20 @@ static Model *_model;
     //    [_model translateText:text
     //                     from:displayLanguage
     //                       to:_settings.targetLanguage];
+    
     if (text.length != 0) 
         
-    
+    {
     
     [_model translateText:text
                      from:displayLanguage
                        to:@"en"];
+
+        self.mainViewController.resultsViewController.originalEmbededLabel.text = text;
+    
+    } else {
+        self.mainViewController.resultsViewController.originalEmbededLabel.text = @"No text could be found in photo";
+    }
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////
@@ -103,6 +110,10 @@ static Model *_model;
     
     // stop activity indicator ???
     //  [self.mainViewController.resultsViewController.activityIndicator stopAnimating];
+    
+    
+    self.mainViewController.resultsViewController.translatedEmbededLabel.text = translatedText;
+
 }
 
 @end
