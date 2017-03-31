@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,22 +21,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1au-Gw-ykY">
-                                <rect key="frame" x="95" y="242" width="185" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Take Photo"/>
-                                <connections>
-                                    <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8yQ-GG-WIr"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJQ-bQ-PfB">
-                                <rect key="frame" x="85" y="374" width="205" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Select Photo"/>
-                                <connections>
-                                    <action selector="selectPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZXm-wo-MNj"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="tb9-NB-KXC">
+                                <rect key="frame" x="116" y="241.5" width="142" height="184"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DKp-3L-Edb">
+                                        <rect key="frame" x="0.0" y="0.0" width="142" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Take Photo"/>
+                                        <connections>
+                                            <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EOH-0H-flx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJQ-bQ-PfB">
+                                        <rect key="frame" x="0.0" y="142" width="142" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Select Photo"/>
+                                        <connections>
+                                            <action selector="selectPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZXm-wo-MNj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zPX-HG-ooP">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
@@ -45,19 +49,16 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="zPX-HG-ooP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9KE-Nm-6Ih"/>
-                            <constraint firstItem="1au-Gw-ykY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="178" id="BHW-rJ-R4b"/>
-                            <constraint firstItem="1au-Gw-ykY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="79" id="Dn3-CL-qrO"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="RJQ-bQ-PfB" secondAttribute="trailing" constant="69" id="HPC-wu-B6z"/>
-                            <constraint firstItem="RJQ-bQ-PfB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="69" id="Kox-dI-DnJ"/>
+                            <constraint firstItem="tb9-NB-KXC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="O5b-H9-DBm"/>
                             <constraint firstItem="zPX-HG-ooP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Zty-c5-7ml"/>
+                            <constraint firstItem="tb9-NB-KXC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="b3h-PC-MSs"/>
                             <constraint firstAttribute="trailing" secondItem="zPX-HG-ooP" secondAttribute="trailing" id="ddx-zo-bIg"/>
-                            <constraint firstItem="RJQ-bQ-PfB" firstAttribute="top" secondItem="1au-Gw-ykY" secondAttribute="bottom" constant="90" id="kFO-oA-xow"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="1au-Gw-ykY" secondAttribute="trailing" constant="79" id="lK1-3x-z5j"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zPX-HG-ooP" secondAttribute="bottom" id="pX2-Gf-SRD"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="RJQ-bQ-PfB" secondAttribute="bottom" constant="251" id="qQb-3h-gm5"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="lHv-JZ-RH1"/>
+                    <navigationItem key="navigationItem" id="lHv-JZ-RH1">
+                        <nil key="title"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="zPX-HG-ooP" id="gjm-ou-BqH"/>
                     </connections>

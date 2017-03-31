@@ -99,7 +99,7 @@
 }
 
 - (void) noCamera {
-    UIAlertController * alert=   [UIAlertController
+    UIAlertController * alert= [UIAlertController
                                   alertControllerWithTitle:@"Error!"
                                   message:@"Your device does not have a camera!"
                                   preferredStyle:UIAlertControllerStyleAlert];
