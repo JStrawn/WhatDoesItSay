@@ -73,6 +73,10 @@ static Model *_model;
     //    [_model translateText:text
     //                     from:displayLanguage
     //                       to:_settings.targetLanguage];
+    if (text.length != 0) 
+        
+    
+    
     [_model translateText:text
                      from:displayLanguage
                        to:@"en"];
