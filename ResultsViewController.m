@@ -25,6 +25,11 @@
 -(void)viewWillAppear:(BOOL)animated {
     self.pictureThumbnail.image = self.pushedImage;
     
+    self.originalEmbededLabel.text = @"";
+    self.translatedEmbededLabel.text = @"";
+    
+    [self.originalTextActivityIndicator setHidden:NO];
+    [self.translatedTextActivityIndicator setHidden:NO];
     [self.originalTextActivityIndicator startAnimating];
     [self.translatedTextActivityIndicator startAnimating];
 }
