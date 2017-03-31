@@ -94,10 +94,10 @@ static Settings *_settings;
 
         // Display the extracted text in the resultsViewController
         self.mainViewController.resultsViewController.originalEmbededLabel.text = text;
-        [self.mainViewController.resultsViewController.originalTextActivityIndicator stopAnimating];
-        [self.mainViewController.resultsViewController.originalTextActivityIndicator setHidden:YES];
-    
-    } else {
+    }
+    // Otherwise, ...
+    else
+        // Display an informational message
         self.mainViewController.resultsViewController.originalEmbededLabel.text = @"No text could be found in photo";
         [self.mainViewController.resultsViewController.originalTextActivityIndicator stopAnimating];
         [self.mainViewController.resultsViewController.originalTextActivityIndicator setHidden:YES];
@@ -105,11 +105,7 @@ static Settings *_settings;
         [self.mainViewController.resultsViewController.translatedTextActivityIndicator setHidden:YES];
 
     }
-    // Otherwise, ...
-    else
-        // Display an informational message
-        self.mainViewController.resultsViewController.originalEmbededLabel.text = @"No text could be found in photo";
-}
+
 
 //////////////////////////////////////////////////////////////////////////////////////////
 //
