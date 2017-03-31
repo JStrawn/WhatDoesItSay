@@ -97,14 +97,17 @@ static Settings *_settings;
     }
     // Otherwise, ...
     else
+    {
         // Display an informational message
         self.mainViewController.resultsViewController.originalEmbededLabel.text = @"No text could be found in photo";
-        [self.mainViewController.resultsViewController.originalTextActivityIndicator stopAnimating];
-        [self.mainViewController.resultsViewController.originalTextActivityIndicator setHidden:YES];
+        
         [self.mainViewController.resultsViewController.translatedTextActivityIndicator stopAnimating];
         [self.mainViewController.resultsViewController.translatedTextActivityIndicator setHidden:YES];
-
     }
+    
+    [self.mainViewController.resultsViewController.originalTextActivityIndicator stopAnimating];
+    [self.mainViewController.resultsViewController.originalTextActivityIndicator setHidden:YES];
+}
 
 
 //////////////////////////////////////////////////////////////////////////////////////////
@@ -114,6 +117,12 @@ static Settings *_settings;
 //////////////////////////////////////////////////////////////////////////////////////////
 - (void) didGetModelError: (NSString *) errorMsg
 {
+    [self.mainViewController.resultsViewController.originalTextActivityIndicator stopAnimating];
+    [self.mainViewController.resultsViewController.originalTextActivityIndicator setHidden:YES];
+    
+    [self.mainViewController.resultsViewController.translatedTextActivityIndicator stopAnimating];
+    [self.mainViewController.resultsViewController.translatedTextActivityIndicator setHidden:YES];
+
     [self.mainViewController displayError:errorMsg];
 }
 
@@ -127,14 +136,9 @@ static Settings *_settings;
     // Display the translated text in the resultsViewController
     self.mainViewController.resultsViewController.translatedEmbededLabel.text = translatedText;
     
-    // stop activity indicator ???
-    //  [self.mainViewController.resultsViewController.activityIndicator stopAnimating];
-    
-    
-    self.mainViewController.resultsViewController.translatedEmbededLabel.text = translatedText;
+    // stop activity indicator
     [self.mainViewController.resultsViewController.translatedTextActivityIndicator stopAnimating];
     [self.mainViewController.resultsViewController.translatedTextActivityIndicator setHidden:YES];
-
 }
 
 @end
