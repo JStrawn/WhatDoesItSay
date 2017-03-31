@@ -22,11 +22,29 @@
         [self noCamera];
     }
     
-    self.setLanguageButton.layer.cornerRadius = 5;
-    self.submitPhotoButton.layer.cornerRadius = 5;
+    //Setting "items" in UINavagationBar
+    self.title = @"What does it say?";
     
+    UIBarButtonItem *settingsButton = [[UIBarButtonItem alloc] initWithTitle:@"Settings" style:UIBarButtonItemStylePlain target:self action:@selector(goToSettingsVC)];
+    self.navigationItem.leftBarButtonItem = settingsButton;
+    
+    UIBarButtonItem *resultsButton = [[UIBarButtonItem alloc] initWithTitle:@"Submit" style:UIBarButtonItemStylePlain target:self action:@selector(goToResultsVC)];
+    self.navigationItem.rightBarButtonItem = resultsButton;
 }
 
+- (void)goToSettingsVC {
+    
+    self.settingsViewController = [[SettingsViewController alloc]init];
+    self.settingsViewController.title = @"Settings";
+    [self.navigationController pushViewController:self.settingsViewController animated:YES];
+}
+
+- (void)goToResultsVC {
+    
+    self.resultsViewController = [[ResultsViewController alloc]init];
+    self.resultsViewController.title = @"Translation";
+    [self.navigationController pushViewController:self.resultsViewController animated:YES];
+}
 
 
 - (IBAction)takePhoto:(id)sender {
@@ -50,13 +68,6 @@
     [self presentViewController:picker animated:YES completion:NULL];
     
 }
-
-- (IBAction)setLanguageButtonWasPressed:(id)sender {
-}
-
-- (IBAction)submitPhotoButtonWasPressed:(id)sender {
-}
-
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
