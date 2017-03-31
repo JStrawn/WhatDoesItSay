@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00DF45A21E8EDADB00CE8613 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DF45A11E8EDADB00CE8613 /* Settings.m */; };
-		00DF45A41E8F0B0700CE8613 /* Bkg0.png in Resources */ = {isa = PBXBuildFile; fileRef = 00DF45A31E8F0B0700CE8613 /* Bkg0.png */; };
+		00DF45A41E8F0B0700CE8613 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		60B8AD111E8E56A1002FB163 /* ImageProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B8AD101E8E56A1002FB163 /* ImageProcessor.m */; };
 		8C2DF4071E8E065B00564E12 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2DF4051E8E065B00564E12 /* SettingsViewController.m */; };
 		8C2DF4081E8E065B00564E12 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C2DF4061E8E065B00564E12 /* SettingsViewController.xib */; };
@@ -98,7 +98,6 @@
 				8C2DF4061E8E065B00564E12 /* SettingsViewController.xib */,
 				00DF45A01E8EDADB00CE8613 /* Settings.h */,
 				00DF45A11E8EDADB00CE8613 /* Settings.m */,
-				00DF45A31E8F0B0700CE8613 /* Bkg0.png */,
 				C34168481E8D8106000AC8E8 /* Supporting Files */,
 				C341684E1E8D8106000AC8E8 /* ViewController.h */,
 				C341684F1E8D8106000AC8E8 /* ViewController.m */,
@@ -145,7 +144,7 @@
 				TargetAttributes = {
 					C34168441E8D8106000AC8E8 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = F4AC4F5SU6;
+						DevelopmentTeam = JJQX5AR27M;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -176,7 +175,7 @@
 				C34168581E8D8106000AC8E8 /* LaunchScreen.storyboard in Resources */,
 				C34168551E8D8106000AC8E8 /* Assets.xcassets in Resources */,
 				C34168531E8D8106000AC8E8 /* Main.storyboard in Resources */,
-				00DF45A41E8F0B0700CE8613 /* Bkg0.png in Resources */,
+				00DF45A41E8F0B0700CE8613 /* (null) in Resources */,
 				C341686B1E8D9BB3000AC8E8 /* ResultsViewController.xib in Resources */,
 				8C2DF4081E8E065B00564E12 /* SettingsViewController.xib in Resources */,
 			);
@@ -317,10 +316,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = F4AC4F5SU6;
+				DEVELOPMENT_TEAM = JJQX5AR27M;
 				INFOPLIST_FILE = ApiTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.bl.ApiTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jstrawn.ApiTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -331,10 +330,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = F4AC4F5SU6;
+				DEVELOPMENT_TEAM = JJQX5AR27M;
 				INFOPLIST_FILE = ApiTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.bl.ApiTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jstrawn.ApiTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

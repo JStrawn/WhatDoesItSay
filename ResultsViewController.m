@@ -20,10 +20,11 @@
     UIBarButtonItem *cameraButton = [[UIBarButtonItem alloc] initWithTitle:@"Camera" style:UIBarButtonItemStyleDone target:self action:@selector(returnToMainVc)];
     self.navigationItem.leftBarButtonItem = cameraButton;
     
-    self.pictureThumbnail.image = self.pushedImage;
 }
 
 -(void)viewWillAppear:(BOOL)animated {
+    self.pictureThumbnail.image = self.pushedImage;
+    
     [self.originalTextActivityIndicator startAnimating];
     [self.translatedTextActivityIndicator startAnimating];
 }
