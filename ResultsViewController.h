@@ -11,6 +11,7 @@
 @interface ResultsViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIImageView *pictureThumbnail;
+@property (strong, nonatomic)UIImage *pushedImage;
 @property (weak, nonatomic) IBOutlet UILabel *originalEmbededLabel;
 @property (weak, nonatomic) IBOutlet UILabel *translatedEmbededLabel;
 
