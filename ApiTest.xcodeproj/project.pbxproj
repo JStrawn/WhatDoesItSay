@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		009586BB1E8EC7F000675F78 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 009586BA1E8EC7F000675F78 /* Settings.m */; };
 		60B8AD111E8E56A1002FB163 /* ImageProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B8AD101E8E56A1002FB163 /* ImageProcessor.m */; };
 		8C2DF4071E8E065B00564E12 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2DF4051E8E065B00564E12 /* SettingsViewController.m */; };
 		8C2DF4081E8E065B00564E12 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C2DF4061E8E065B00564E12 /* SettingsViewController.xib */; };
@@ -22,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		009586B81E8EB24000675F78 /* APIKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIKey.h; sourceTree = "<group>"; };
+		009586B91E8EC7F000675F78 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Settings.h; path = ../../../../../../Desktop/WhatDoesItSay/WhatDoesItSay/ApiTest/Settings.h; sourceTree = "<group>"; };
+		009586BA1E8EC7F000675F78 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Settings.m; path = ../../../../../../Desktop/WhatDoesItSay/WhatDoesItSay/ApiTest/Settings.m; sourceTree = "<group>"; };
 		606DC6921E8DF2D7004EF2E6 /* APIKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIKey.h; sourceTree = "<group>"; };
 		60B8AD0F1E8E56A1002FB163 /* ImageProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageProcessor.h; sourceTree = "<group>"; };
 		60B8AD101E8E56A1002FB163 /* ImageProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageProcessor.m; sourceTree = "<group>"; };
@@ -76,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				606DC6921E8DF2D7004EF2E6 /* APIKey.h */,
+				009586B81E8EB24000675F78 /* APIKey.h */,
 				C341684B1E8D8106000AC8E8 /* AppDelegate.h */,
 				C341684C1E8D8106000AC8E8 /* AppDelegate.m */,
 				C34168541E8D8106000AC8E8 /* Assets.xcassets */,
@@ -91,6 +96,8 @@
 				C34168691E8D9BB3000AC8E8 /* ResultsViewController.xib */,
 				8C2DF4041E8E065B00564E12 /* SettingsViewController.h */,
 				8C2DF4051E8E065B00564E12 /* SettingsViewController.m */,
+				009586B91E8EC7F000675F78 /* Settings.h */,
+				009586BA1E8EC7F000675F78 /* Settings.m */,
 				8C2DF4061E8E065B00564E12 /* SettingsViewController.xib */,
 				C34168481E8D8106000AC8E8 /* Supporting Files */,
 				C341684E1E8D8106000AC8E8 /* ViewController.h */,
@@ -187,6 +194,7 @@
 				C341684D1E8D8106000AC8E8 /* AppDelegate.m in Sources */,
 				8C2DF4071E8E065B00564E12 /* SettingsViewController.m in Sources */,
 				C341684A1E8D8106000AC8E8 /* main.m in Sources */,
+				009586BB1E8EC7F000675F78 /* Settings.m in Sources */,
 				C341686A1E8D9BB3000AC8E8 /* ResultsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
