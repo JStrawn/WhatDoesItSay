@@ -13,12 +13,13 @@
 		C34168531E8D8106000AC8E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C34168511E8D8106000AC8E8 /* Main.storyboard */; };
 		C34168551E8D8106000AC8E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C34168541E8D8106000AC8E8 /* Assets.xcassets */; };
 		C34168581E8D8106000AC8E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C34168561E8D8106000AC8E8 /* LaunchScreen.storyboard */; };
-		C34168611E8D8119000AC8E8 /* DAO.m in Sources */ = {isa = PBXBuildFile; fileRef = C34168601E8D8119000AC8E8 /* DAO.m */; };
+		C34168611E8D8119000AC8E8 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = C34168601E8D8119000AC8E8 /* Model.m */; };
 		C341686A1E8D9BB3000AC8E8 /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C34168681E8D9BB3000AC8E8 /* ResultsViewController.m */; };
 		C341686B1E8D9BB3000AC8E8 /* ResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C34168691E8D9BB3000AC8E8 /* ResultsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		606DC6921E8DF2D7004EF2E6 /* APIKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIKey.h; sourceTree = "<group>"; };
 		C34168451E8D8106000AC8E8 /* ApiTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApiTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C34168491E8D8106000AC8E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C341684B1E8D8106000AC8E8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -29,8 +30,8 @@
 		C34168541E8D8106000AC8E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C34168571E8D8106000AC8E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C34168591E8D8107000AC8E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C341685F1E8D8119000AC8E8 /* DAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAO.h; sourceTree = "<group>"; };
-		C34168601E8D8119000AC8E8 /* DAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAO.m; sourceTree = "<group>"; };
+		C341685F1E8D8119000AC8E8 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		C34168601E8D8119000AC8E8 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
 		C34168671E8D9BB3000AC8E8 /* ResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResultsViewController.h; path = ../ResultsViewController.h; sourceTree = "<group>"; };
 		C34168681E8D9BB3000AC8E8 /* ResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResultsViewController.m; path = ../ResultsViewController.m; sourceTree = "<group>"; };
 		C34168691E8D9BB3000AC8E8 /* ResultsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ResultsViewController.xib; path = ../ResultsViewController.xib; sourceTree = "<group>"; };
@@ -66,8 +67,9 @@
 		C34168471E8D8106000AC8E8 /* ApiTest */ = {
 			isa = PBXGroup;
 			children = (
-				C341685F1E8D8119000AC8E8 /* DAO.h */,
-				C34168601E8D8119000AC8E8 /* DAO.m */,
+				C341685F1E8D8119000AC8E8 /* Model.h */,
+				606DC6921E8DF2D7004EF2E6 /* APIKey.h */,
+				C34168601E8D8119000AC8E8 /* Model.m */,
 				C341684B1E8D8106000AC8E8 /* AppDelegate.h */,
 				C341684C1E8D8106000AC8E8 /* AppDelegate.m */,
 				C341684E1E8D8106000AC8E8 /* ViewController.h */,
@@ -165,7 +167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C34168611E8D8119000AC8E8 /* DAO.m in Sources */,
+				C34168611E8D8119000AC8E8 /* Model.m in Sources */,
 				C34168501E8D8106000AC8E8 /* ViewController.m in Sources */,
 				C341684D1E8D8106000AC8E8 /* AppDelegate.m in Sources */,
 				C341684A1E8D8106000AC8E8 /* main.m in Sources */,
@@ -328,6 +330,7 @@
 				C341685E1E8D8107000AC8E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
