@@ -22,6 +22,13 @@
     
     self.pictureThumbnail.image = self.pushedImage;
     
+    
+    //self.originalTextActivityIndicator = [[UIActivityIndicatorView alloc]init];
+    //self.translatedTextActivityIndicator = [[UIActivityIndicatorView alloc]init];
+    
+    [self.originalTextActivityIndicator startAnimating];
+    [self.translatedTextActivityIndicator startAnimating];
+    
 }
 
 - (void)returnToMainVc {

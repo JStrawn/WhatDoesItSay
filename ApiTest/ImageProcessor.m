@@ -83,9 +83,16 @@ static Model *_model;
                        to:@"en"];
 
         self.mainViewController.resultsViewController.originalEmbededLabel.text = text;
+        [self.mainViewController.resultsViewController.originalTextActivityIndicator stopAnimating];
+        [self.mainViewController.resultsViewController.originalTextActivityIndicator setHidden:YES];
     
     } else {
         self.mainViewController.resultsViewController.originalEmbededLabel.text = @"No text could be found in photo";
+        [self.mainViewController.resultsViewController.originalTextActivityIndicator stopAnimating];
+        [self.mainViewController.resultsViewController.originalTextActivityIndicator setHidden:YES];
+        [self.mainViewController.resultsViewController.translatedTextActivityIndicator stopAnimating];
+        [self.mainViewController.resultsViewController.translatedTextActivityIndicator setHidden:YES];
+
     }
 }
 
@@ -113,6 +120,8 @@ static Model *_model;
     
     
     self.mainViewController.resultsViewController.translatedEmbededLabel.text = translatedText;
+    [self.mainViewController.resultsViewController.translatedTextActivityIndicator stopAnimating];
+    [self.mainViewController.resultsViewController.translatedTextActivityIndicator setHidden:YES];
 
 }
 
