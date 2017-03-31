@@ -92,9 +92,6 @@
 }
 
 
-// tell the picker the title for a given component
-
-
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     
