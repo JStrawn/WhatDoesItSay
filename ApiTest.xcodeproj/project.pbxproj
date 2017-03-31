@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00DF45A21E8EDADB00CE8613 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DF45A11E8EDADB00CE8613 /* Settings.m */; };
+		00DF45A41E8F0B0700CE8613 /* Bkg0.png in Resources */ = {isa = PBXBuildFile; fileRef = 00DF45A31E8F0B0700CE8613 /* Bkg0.png */; };
 		60B8AD111E8E56A1002FB163 /* ImageProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B8AD101E8E56A1002FB163 /* ImageProcessor.m */; };
 		8C2DF4071E8E065B00564E12 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2DF4051E8E065B00564E12 /* SettingsViewController.m */; };
 		8C2DF4081E8E065B00564E12 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C2DF4061E8E065B00564E12 /* SettingsViewController.xib */; };
@@ -97,6 +98,7 @@
 				8C2DF4061E8E065B00564E12 /* SettingsViewController.xib */,
 				00DF45A01E8EDADB00CE8613 /* Settings.h */,
 				00DF45A11E8EDADB00CE8613 /* Settings.m */,
+				00DF45A31E8F0B0700CE8613 /* Bkg0.png */,
 				C34168481E8D8106000AC8E8 /* Supporting Files */,
 				C341684E1E8D8106000AC8E8 /* ViewController.h */,
 				C341684F1E8D8106000AC8E8 /* ViewController.m */,
@@ -174,6 +176,7 @@
 				C34168581E8D8106000AC8E8 /* LaunchScreen.storyboard in Resources */,
 				C34168551E8D8106000AC8E8 /* Assets.xcassets in Resources */,
 				C34168531E8D8106000AC8E8 /* Main.storyboard in Resources */,
+				00DF45A41E8F0B0700CE8613 /* Bkg0.png in Resources */,
 				C341686B1E8D9BB3000AC8E8 /* ResultsViewController.xib in Resources */,
 				8C2DF4081E8E065B00564E12 /* SettingsViewController.xib in Resources */,
 			);
