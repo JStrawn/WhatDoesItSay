@@ -7,12 +7,17 @@
 //
 
 #import "ViewController.h"
+#import "ImageProcessor.h"
+
 
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
+{
+    ImageProcessor *_imageProcessor;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -30,6 +35,11 @@
     
     UIBarButtonItem *resultsButton = [[UIBarButtonItem alloc] initWithTitle:@"Submit" style:UIBarButtonItemStylePlain target:self action:@selector(goToResultsVC)];
     self.navigationItem.rightBarButtonItem = resultsButton;
+    
+    self.resultsViewController = [[ResultsViewController alloc] init];
+
+    _imageProcessor = [ImageProcessor sharedInstance];
+    _imageProcessor.mainViewController = self;
 }
 
 - (void)goToSettingsVC {
@@ -41,7 +51,6 @@
 
 - (void)goToResultsVC {
     
-    self.resultsViewController = [[ResultsViewController alloc]init];
     self.resultsViewController.title = @"Translation";
     [self.navigationController pushViewController:self.resultsViewController animated:YES];
 }
@@ -73,7 +82,7 @@
     
     UIImage *selectedImage = [info objectForKey:UIImagePickerControllerOriginalImage];
     NSData *imageData = UIImageJPEGRepresentation(selectedImage, 0.5);
-    [DAO sendToVisionAPI:imageData];
+    [_imageProcessor processImage:imageData];
     
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
     self.imageView.image = chosenImage;
@@ -108,5 +117,29 @@
     [self presentViewController:alert animated:YES completion:nil];
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Method for displaying an error message.
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+- (void) displayError:(NSString *)errorMsg
+{
+    // Initialize the controller for displaying the message
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@" "
+                                                                   message:errorMsg
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    
+    // Create an OK button
+    UIAlertAction* okButton = [UIAlertAction actionWithTitle:@"OK"
+                                                       style:UIAlertActionStyleDefault
+                                                     handler:nil];
+    
+    // Add the button to the controller
+    [alert addAction:okButton];
+    
+    // Display the alert controller on the topmost viewController
+    UINavigationController *navigationController = (UINavigationController *)[UIApplication sharedApplication].keyWindow.rootViewController;
+    [navigationController.topViewController presentViewController:alert animated:YES completion:nil];
+}
 
 @end
