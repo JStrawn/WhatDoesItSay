@@ -32,6 +32,22 @@
     [self.targetPickerView reloadAllComponents];
 }
 
+-(void) viewWillAppear:(BOOL)animated {
+    int selectedRow;
+    
+    if ([self.settings.sourceLanguage isEqualToString:@"unk"])
+        selectedRow = 0;
+    else
+        selectedRow = (int)[self.settings.sourceLanguagesList indexOfObject:self.settings.sourceLanguage];
+
+    [self.sourcePickerView selectRow:selectedRow inComponent:0 animated:YES];
+    
+    selectedRow = (int)[self.settings.targetLanguagesList indexOfObject:self.settings.targetLanguage];
+    
+    [self.targetPickerView selectRow:selectedRow inComponent:0 animated:YES];
+}
+
+
 #pragma mark language setting methods
 
 - (void)saveLanguageSetting {
@@ -77,6 +93,9 @@
 
 
 // tell the picker the title for a given component
+
+
+
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     
     if (pickerView == self.sourcePickerView) {

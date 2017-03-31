@@ -52,8 +52,11 @@
     NSString *languageName = [enLocale displayNameForKey:NSLocaleIdentifier value:preferredLanguageCode]; //name of language, eg. "French"
     
     NSLog(@"preferredLanguages: %@, enLocale:%@, LanguageName:%@",preferredLanguages,enLocale,languageName);
+    NSArray *languageTemp = [languageName componentsSeparatedByString:@" "];
+    languageName = languageTemp[0];
     
-    return [preferredLanguageCode substringWithRange:NSMakeRange(0, 2)];
+    return languageName;
+//    return [preferredLanguageCode substringWithRange:NSMakeRange(0, 2)];
 }
 
 
