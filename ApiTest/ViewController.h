@@ -22,7 +22,7 @@
 - (IBAction)selectPhoto:(id)sender;
 
 - (void) displayError: (NSString *) errorMsg;
-- (void )goToResultsVC;
+- (void) goToResultsVC;
 
 @end
 

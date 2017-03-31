@@ -26,7 +26,6 @@
 		009586B81E8EB24000675F78 /* APIKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIKey.h; sourceTree = "<group>"; };
 		00DF45A01E8EDADB00CE8613 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		00DF45A11E8EDADB00CE8613 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
-		606DC6921E8DF2D7004EF2E6 /* APIKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIKey.h; sourceTree = "<group>"; };
 		60B8AD0F1E8E56A1002FB163 /* ImageProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageProcessor.h; sourceTree = "<group>"; };
 		60B8AD101E8E56A1002FB163 /* ImageProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageProcessor.m; sourceTree = "<group>"; };
 		8C2DF4041E8E065B00564E12 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
@@ -79,7 +78,6 @@
 		C34168471E8D8106000AC8E8 /* ApiTest */ = {
 			isa = PBXGroup;
 			children = (
-				606DC6921E8DF2D7004EF2E6 /* APIKey.h */,
 				009586B81E8EB24000675F78 /* APIKey.h */,
 				C341684B1E8D8106000AC8E8 /* AppDelegate.h */,
 				C341684C1E8D8106000AC8E8 /* AppDelegate.m */,
@@ -145,7 +143,7 @@
 				TargetAttributes = {
 					C34168441E8D8106000AC8E8 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = JJQX5AR27M;
+						DevelopmentTeam = F4AC4F5SU6;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -316,10 +314,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = JJQX5AR27M;
+				DEVELOPMENT_TEAM = F4AC4F5SU6;
 				INFOPLIST_FILE = ApiTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jstrawn.ApiTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bl.ApiTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -330,10 +328,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = JJQX5AR27M;
+				DEVELOPMENT_TEAM = F4AC4F5SU6;
 				INFOPLIST_FILE = ApiTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jstrawn.ApiTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bl.ApiTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

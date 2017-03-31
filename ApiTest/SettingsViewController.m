@@ -35,6 +35,8 @@
 -(void) viewWillAppear:(BOOL)animated {
     int selectedRow;
     
+    // If the sourceLanguage has not been set by the user, it will have the value of
+    // "unk", which is short for unknown. This is default for Microsoft language setting.
     if ([self.settings.sourceLanguage isEqualToString:@"unk"])
         selectedRow = 0;
     else
@@ -48,7 +50,7 @@
 }
 
 
-#pragma mark language setting methods
+#pragma mark - language setting methods
 
 - (void)saveLanguageSetting {
     
@@ -60,7 +62,7 @@
 
 
 
-#pragma mark pickerView Delegate methods
+#pragma mark - pickerView Delegate methods
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow: (NSInteger)row inComponent:(NSInteger)component {
     // Handle the selection
     if (pickerView == self.sourcePickerView) {
@@ -93,9 +95,6 @@
 
 
 // tell the picker the title for a given component
-
-
-
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     
     if (pickerView == self.sourcePickerView) {
@@ -105,12 +104,5 @@
     return self.settings.targetLanguagesList[row];
 }
 
-
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 @end

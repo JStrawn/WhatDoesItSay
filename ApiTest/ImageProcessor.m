@@ -65,14 +65,10 @@ static Settings *_settings;
 //////////////////////////////////////////////////////////////////////////////////////////
 - (void) processImage: (NSData *) imageData
 {
+    // Send the image for OCR processing
     [_model extractText:_languageDictionary[_settings.sourceLanguage] from:imageData];
     
-    // set resultsViewController thumbnail ???
-    
     [self.mainViewController goToResultsVC];
-    
-    // start activity indicator ???
-    //  [self.mainViewController.resultsViewController.activityIndicator startAnimating];
 }
 
 #pragma mark - Model Delegate Methods
@@ -117,9 +113,9 @@ static Settings *_settings;
 //////////////////////////////////////////////////////////////////////////////////////////
 - (void) didGetModelError: (NSString *) errorMsg
 {
+    // stop activity indicator
     [self.mainViewController.resultsViewController.originalTextActivityIndicator stopAnimating];
     [self.mainViewController.resultsViewController.originalTextActivityIndicator setHidden:YES];
-    
     [self.mainViewController.resultsViewController.translatedTextActivityIndicator stopAnimating];
     [self.mainViewController.resultsViewController.translatedTextActivityIndicator setHidden:YES];
 

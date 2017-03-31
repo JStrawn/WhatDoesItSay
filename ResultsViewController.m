@@ -21,13 +21,6 @@
     self.navigationItem.leftBarButtonItem = cameraButton;
     
     self.pictureThumbnail.image = self.pushedImage;
-    
-    
-    //self.originalTextActivityIndicator = [[UIActivityIndicatorView alloc]init];
-    //self.translatedTextActivityIndicator = [[UIActivityIndicatorView alloc]init];
-    
-
-    
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -39,9 +32,5 @@
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 @end

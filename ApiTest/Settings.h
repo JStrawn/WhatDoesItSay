@@ -16,7 +16,6 @@
 @property (strong, nonatomic)  NSString *targetLanguage;
 @property (strong, nonatomic)  NSString *sourceLanguage;
 
--(void) checkLanguageSettings;
 - (void) save;
 
 @end

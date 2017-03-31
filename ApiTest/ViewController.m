@@ -22,16 +22,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //If no camera, show alert
+    // If no camera, show alert
     if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
-        [self noCamera];
+        [self displayError:@"Your device does not have a camera!"];
     }
     
-    //Setting "items" in UINavagationBar
-    self.title = @"What does it say?";
-    
-    //Do not erase - Miguel
-//    UIColor *navBarCustomColor = [UIColor alloc]initWithRed:242.0 green:231.0 blue:248.0 alpha:1.0
+    // Setting "items" in UINavagationBar
+    self.title = @"";
     
     UIBarButtonItem *settingsButton = [[UIBarButtonItem alloc] initWithTitle:@"Settings" style:UIBarButtonItemStylePlain target:self action:@selector(goToSettingsVC)];
     self.navigationItem.leftBarButtonItem = settingsButton;
@@ -63,15 +60,9 @@
 
 - (void)goToResultsVC {
     
-    self.resultsViewController = [[ResultsViewController alloc]init];
-    
     self.resultsViewController.title = @"Translation";
     
-    UIImage *imageToPush = [[UIImage alloc]init];
-    imageToPush = self.photo;
-    
-    self.resultsViewController.pushedImage = imageToPush;
-    //self.imageView.image = self.resultsViewController.
+    self.resultsViewController.pushedImage = self.photo;
     [self.navigationController pushViewController:self.resultsViewController animated:YES];
 }
 
@@ -115,25 +106,6 @@
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
     
-}
-
-- (void) noCamera {
-    UIAlertController * alert= [UIAlertController
-                                  alertControllerWithTitle:@"Error!"
-                                  message:@"Your device does not have a camera!"
-                                  preferredStyle:UIAlertControllerStyleAlert];
-    
-    UIAlertAction* ok = [UIAlertAction
-                         actionWithTitle:@"OK"
-                         style:UIAlertActionStyleDefault
-                         handler:^(UIAlertAction * action)
-                         {
-                             [alert dismissViewControllerAnimated:YES completion:nil];
-                             
-                         }];
-    
-    [alert addAction:ok];
-    [self presentViewController:alert animated:YES completion:nil];
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////
