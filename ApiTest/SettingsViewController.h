@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Settings.h"
 
-@interface SettingsViewController : UIViewController
+@interface SettingsViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource>
+
+
+@property (strong, nonatomic) IBOutlet UIPickerView *sourcePickerView;
+@property (strong, nonatomic) IBOutlet UIPickerView *targetPickerView;
+
+@property (strong, nonatomic) Settings *settings;
+
+- (void)saveLanguageSetting;
 
 @end

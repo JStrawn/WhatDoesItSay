@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00DF45A21E8EDADB00CE8613 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DF45A11E8EDADB00CE8613 /* Settings.m */; };
 		60B8AD111E8E56A1002FB163 /* ImageProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B8AD101E8E56A1002FB163 /* ImageProcessor.m */; };
 		8C2DF4071E8E065B00564E12 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2DF4051E8E065B00564E12 /* SettingsViewController.m */; };
 		8C2DF4081E8E065B00564E12 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C2DF4061E8E065B00564E12 /* SettingsViewController.xib */; };
@@ -22,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		009586B81E8EB24000675F78 /* APIKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIKey.h; sourceTree = "<group>"; };
+		00DF45A01E8EDADB00CE8613 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		00DF45A11E8EDADB00CE8613 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
 		606DC6921E8DF2D7004EF2E6 /* APIKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIKey.h; sourceTree = "<group>"; };
 		60B8AD0F1E8E56A1002FB163 /* ImageProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageProcessor.h; sourceTree = "<group>"; };
 		60B8AD101E8E56A1002FB163 /* ImageProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageProcessor.m; sourceTree = "<group>"; };
@@ -76,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				606DC6921E8DF2D7004EF2E6 /* APIKey.h */,
+				009586B81E8EB24000675F78 /* APIKey.h */,
 				C341684B1E8D8106000AC8E8 /* AppDelegate.h */,
 				C341684C1E8D8106000AC8E8 /* AppDelegate.m */,
 				C34168541E8D8106000AC8E8 /* Assets.xcassets */,
@@ -91,6 +96,8 @@
 				C34168691E8D9BB3000AC8E8 /* ResultsViewController.xib */,
 				8C2DF4041E8E065B00564E12 /* SettingsViewController.h */,
 				8C2DF4051E8E065B00564E12 /* SettingsViewController.m */,
+				00DF45A01E8EDADB00CE8613 /* Settings.h */,
+				00DF45A11E8EDADB00CE8613 /* Settings.m */,
 				8C2DF4061E8E065B00564E12 /* SettingsViewController.xib */,
 				C34168481E8D8106000AC8E8 /* Supporting Files */,
 				C341684E1E8D8106000AC8E8 /* ViewController.h */,
@@ -138,7 +145,7 @@
 				TargetAttributes = {
 					C34168441E8D8106000AC8E8 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 5C8D6R84CB;
+						DevelopmentTeam = 6F8P242K3J;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -183,6 +190,7 @@
 			files = (
 				60B8AD111E8E56A1002FB163 /* ImageProcessor.m in Sources */,
 				C34168611E8D8119000AC8E8 /* Model.m in Sources */,
+				00DF45A21E8EDADB00CE8613 /* Settings.m in Sources */,
 				C34168501E8D8106000AC8E8 /* ViewController.m in Sources */,
 				C341684D1E8D8106000AC8E8 /* AppDelegate.m in Sources */,
 				8C2DF4071E8E065B00564E12 /* SettingsViewController.m in Sources */,
@@ -308,10 +316,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 5C8D6R84CB;
+				DEVELOPMENT_TEAM = 6F8P242K3J;
 				INFOPLIST_FILE = ApiTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Miguel-Tepale.ApiTest";
+				PRODUCT_BUNDLE_IDENTIFIER = com.emiclark.ApiTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -322,10 +330,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 5C8D6R84CB;
+				DEVELOPMENT_TEAM = 6F8P242K3J;
 				INFOPLIST_FILE = ApiTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Miguel-Tepale.ApiTest";
+				PRODUCT_BUNDLE_IDENTIFIER = com.emiclark.ApiTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
