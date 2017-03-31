@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -21,41 +21,51 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="-15" translatesAutoresizingMaskIntoConstraints="NO" id="ri3-gE-HAb">
+                    <rect key="frame" x="27" y="445.5" width="320" height="221.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Translate to:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgE-zh-k17">
+                            <rect key="frame" x="0.0" y="0.0" width="98" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                            <color key="textColor" red="0.3194822371006012" green="0.14316189289093018" blue="0.93707489967346191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fSy-dz-rQK" userLabel="Translate to picker">
+                            <rect key="frame" x="0.0" y="5.5" width="320" height="216"/>
+                        </pickerView>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="-15" translatesAutoresizingMaskIntoConstraints="NO" id="qlV-JJ-7my">
+                    <rect key="frame" x="27" y="215.5" width="320" height="221.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick Your Language:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BGy-b2-J1U">
+                            <rect key="frame" x="0.0" y="0.0" width="160" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                            <color key="textColor" red="0.3194822371006012" green="0.14316189289093018" blue="0.93707489967346191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kGa-xJ-kGc" userLabel="Pick Your Language picker">
+                            <rect key="frame" x="0.0" y="5.5" width="320" height="216"/>
+                        </pickerView>
+                    </subviews>
+                </stackView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What does it say?™" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpd-Gt-1JQ">
-                    <rect key="frame" x="97" y="99.5" width="181" height="28"/>
+                    <rect key="frame" x="97" y="136" width="181" height="28"/>
                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
-                    <color key="textColor" red="0.3194822371006012" green="0.14316189289093018" blue="0.93707489967346191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kGa-xJ-kGc" userLabel="Pick Your Language picker">
-                    <rect key="frame" x="0.0" y="206" width="375" height="216"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                </pickerView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Translate to:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgE-zh-k17">
-                    <rect key="frame" x="16" y="430" width="98" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                    <color key="textColor" red="0.3194822371006012" green="0.14316189289093018" blue="0.93707489967346191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fSy-dz-rQK" userLabel="Translate to picker">
-                    <rect key="frame" x="0.0" y="459" width="375" height="216"/>
-                </pickerView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pick Your Language:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BGy-b2-J1U">
-                    <rect key="frame" x="16" y="170" width="160" height="28"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                     <color key="textColor" red="0.3194822371006012" green="0.14316189289093018" blue="0.93707489967346191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" red="0.839964825107826" green="0.73246429947281366" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="fSy-dz-rQK" secondAttribute="bottom" constant="-8" id="4sD-9K-azf"/>
-                <constraint firstItem="fSy-dz-rQK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="A87-7p-1AX"/>
-                <constraint firstItem="dpd-Gt-1JQ" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-220" id="FUB-lW-GQq"/>
-                <constraint firstAttribute="trailing" secondItem="fSy-dz-rQK" secondAttribute="trailing" id="LvM-yQ-0oZ"/>
-                <constraint firstItem="dpd-Gt-1JQ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="hQB-ch-aBh"/>
+                <constraint firstItem="kGa-xJ-kGc" firstAttribute="top" secondItem="dpd-Gt-1JQ" secondAttribute="bottom" constant="57" id="2TW-IF-gMr"/>
+                <constraint firstItem="ri3-gE-HAb" firstAttribute="top" secondItem="qlV-JJ-7my" secondAttribute="bottom" constant="8" id="3gc-Rx-uar"/>
+                <constraint firstItem="qlV-JJ-7my" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="27" id="FPv-kV-ia3"/>
+                <constraint firstItem="dpd-Gt-1JQ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="GCp-Ra-kNL"/>
+                <constraint firstAttribute="trailing" secondItem="qlV-JJ-7my" secondAttribute="trailing" constant="28" id="W9z-XL-UV6"/>
+                <constraint firstItem="ri3-gE-HAb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="27" id="dmk-Kd-fiP"/>
+                <constraint firstAttribute="bottom" secondItem="ri3-gE-HAb" secondAttribute="bottom" id="fHq-EX-Bd9"/>
+                <constraint firstAttribute="trailing" secondItem="ri3-gE-HAb" secondAttribute="trailing" constant="28" id="rgO-30-Du3"/>
             </constraints>
             <point key="canvasLocation" x="33.5" y="54.5"/>
         </view>
