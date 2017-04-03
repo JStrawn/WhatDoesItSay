@@ -104,5 +104,4 @@
     return self.settings.targetLanguagesList[row];
 }
 
-
 @end
